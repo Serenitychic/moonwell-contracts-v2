@@ -20,10 +20,6 @@ import {MultiRewardDistributorCommon} from "@protocol/MultiRewardDistributor/Mul
 contract mipb01 is Proposal, CrossChainProposal, ChainIds, Configs {
     string public constant name = "MIP01";
 
-    constructor() {
-        _setNonce(2);
-    }
-
     function deploy(Addresses addresses, address) public override {}
 
     function afterDeploy(Addresses addresses, address) public override {}

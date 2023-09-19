@@ -17,7 +17,7 @@ contract mipt01 is Proposal, CrossChainProposal, ChainIds, Configs {
     string public constant name = "mip-t01";
 
     constructor() {
-        _setNonce(2);
+        
         string memory descriptionPath = string(
             abi.encodePacked("proposals/mips/", name, "/", name, ".md")
         );

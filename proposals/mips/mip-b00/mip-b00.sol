@@ -46,10 +46,6 @@ contract mipb00 is Proposal, CrossChainProposal, ChainIds, Configs {
     ///  Moonbase alpha          16	             1287	    0xa5B7D85a8f27dd7907dc8FdC21FA5657D5E2F901
     /// --------------------------------------------------------------------------------------------------///
 
-    constructor() {
-        _setNonce(2);
-    }
-
     struct CTokenAddresses {
         address mTokenImpl;
         address irModel;

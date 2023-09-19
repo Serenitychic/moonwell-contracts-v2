@@ -10,7 +10,7 @@ import {MoonwellArtemisGovernor} from "@protocol/Governance/deprecated/MoonwellA
 
 /// Reuse Multisig Proposal contract for readability and to avoid code duplication
 abstract contract CrossChainProposal is MultisigProposal, MarketCreationHook {
-    uint32 public nonce; /// nonce for wormhole
+    uint32 private constant nonce = 0; /// nonce for wormhole, unused by Temporal Governor
 
     /// instant finality on moonbeam https://book.wormhole.com/wormhole/3_coreLayerContracts.html?highlight=consiste#consistency-levels
     uint16 public constant consistencyLevel = 200;
@@ -23,11 +23,6 @@ abstract contract CrossChainProposal is MultisigProposal, MarketCreationHook {
         bytes memory newProposalDescription
     ) internal {
         PROPOSAL_DESCRIPTION = newProposalDescription;
-    }
-
-    /// @notice set the nonce for the cross chain proposal
-    function _setNonce(uint32 _nonce) internal {
-        nonce = _nonce;
     }
 
     /// @notice push a CrossChain proposal action

@@ -19,6 +19,8 @@ Run the tests with the fork test.
 
 Example proposal MIP01 can be found, which creates reward streams for the system on base.
 
+## Nonce
+Please note: the nonce field set in [CrossChainProposal.sol](./../proposals/proposalTypes/CrossChainProposal.sol) is completely extraneous as this field is not used in the Temporal Governor when it processes cross chain messages. There is no need to set this field in any cross chain proposal.
 
 ### Generating Calldata for an Existing Proposal
 

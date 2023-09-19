@@ -33,8 +33,6 @@ contract mipb02 is Proposal, CrossChainProposal, ChainIds, Configs {
     uint256 public constant SCALE = 1e18;
 
     constructor() {
-        _setNonce(2);
-
         bytes memory proposalDescription = abi.encodePacked(
             vm.readFile("./proposals/mips/mip-b02/MIP-B02.md")
         );

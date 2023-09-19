@@ -20,7 +20,6 @@ contract mipb01 is Proposal, CrossChainProposal, ChainIds, Configs {
     uint256 public constant SCALE = 1e18;
 
     constructor() {
-        _setNonce(2);
         _setProposalDescription("./proposals/mips/mip-b01/MIP-B01.md");
     }
 

@@ -27,10 +27,6 @@ contract mip02 is Proposal, CrossChainProposal, ChainIds, Configs {
     string public constant name = "MIP02";
     uint8 public constant mTokenDecimals = 8; /// all mTokens have 8 decimals
 
-    constructor() {
-        _setNonce(2);
-    }
-
     struct CTokenAddresses {
         address mTokenImpl;
         address irModel;

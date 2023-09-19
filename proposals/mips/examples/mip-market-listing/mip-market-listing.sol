@@ -54,7 +54,6 @@ contract mip0x is Proposal, CrossChainProposal, ChainIds, Configs {
     }
 
     constructor() {
-        _setNonce(4);
         /// for example, should be set to
         /// LISTING_PATH="./proposals/mips/examples/mip-market-listing/MarketListingDescription.md"
         string memory descriptionPath = vm.envString("LISTING_PATH");
