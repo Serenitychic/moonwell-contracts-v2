@@ -183,12 +183,12 @@ Removed ${network}-${sequence} from the KV store.`
         const { GOVBOT_WEBHOOK } = credentials.secrets;
         const moonwellEvent = new MoonwellEvent();
         const discordPayload = moonwellEvent.discordMessagePayload(
-          0x42B24E, // Green (Go color in Moonwell Guide)
+          0x00ff00, // Bright green
           `Successfully executed cross-chain proposal...`,
           blockExplorer + tx.hash,
           network,
           sequence,
-          timestamp,
+          now,
           `The governance proposal associated with cross-chain message sequence ${sequence} successfully executed on the ${network} network.`
         );
         await moonwellEvent.sendDiscordMessage(GOVBOT_WEBHOOK, discordPayload);
@@ -211,7 +211,7 @@ Removed ${network}-${sequence} from the KV store.`
         blockExplorer + tx.hash,
         network,
         sequence,
-        timestamp,
+        now,
         `The governance proposal associated with cross-chain message sequence ${sequence} failed to execute on the ${network} network.`
       );
       await moonwellEvent.sendDiscordMessage(GOVBOT_WEBHOOK, discordPayload);
